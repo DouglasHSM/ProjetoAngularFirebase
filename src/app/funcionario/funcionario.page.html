@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>funcionario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ng-container *ngFor="let funcionario of this.funcionarios">
+          <ion-item>
+            <ion-label>{{ funcionario.Nome }}</ion-label>
+            <ion-button (click)="remover(funcionario.CodFun)">remover</ion-button>
+          </ion-item>
+        </ng-container>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
